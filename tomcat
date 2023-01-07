@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "slave1 linux"        
+        label "linux"        
     }
     stages {
         stage('clone') {
