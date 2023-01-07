@@ -1,0 +1,19 @@
+pipeline {
+    agent {
+        label "slave1 linux"        
+    }
+    stages {
+        stage('clone') {
+            steps {
+                sh 'rm -rf Tomcat_installation'
+                sh 'git clone https://github.com/rajsoundarya/Tomcat_installation.git'
+            }
+        }
+        stage('install tomcat') {
+            steps {
+                sh 'chmod 755 ${WORKSPACE}/Tomcat_installation/tomcat'
+                sh '${WORKSPACE}/Tomcat_installation/tomcat'
+            }
+        }
+    }
+}
