@@ -14,3 +14,4 @@ sudo systemctl restart tomcat9
 
 sudo sh -c "echo 'jenkins ALL=(ALL) NOPASSWD: /var/lib/jenkins/workspace' >> /etc/sudoers"
 sudo sh -c "echo 'jenkins ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers"
+#tomcat installation
